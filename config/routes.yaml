@@ -1,0 +1,96 @@
+getUsers:
+  path:       /users
+  controller: App\Controller\UserController::getUsers
+  methods:    GET
+
+getUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::getUser1
+  methods:    GET
+  defaults:
+    id: 1
+
+postUser:
+  path:       /users
+  controller: App\Controller\UserController::createUser
+  methods:    POST
+
+patchUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::patchUser
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::deleteUser
+  methods:    DELETE
+  defaults:
+    id: 1
+
+getMessagesById:
+  path:       /user-message/{userId}
+  controller: App\Controller\MessageController::getUserMessages
+  methods:    GET
+  defaults:
+    userId: 1
+
+getMessage:
+  path:       /message/{id}
+  controller: App\Controller\MessageController::getMessage
+  methods:    GET
+  defaults:
+    id: 1
+
+postMessage:
+  path:       /message
+  controller: App\Controller\MessageController::createMessage
+  methods:    POST
+
+patchMessage:
+  path:       /message/{id}
+  controller: App\Controller\MessageController::patchMessage
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteMessage:
+  path:       /message/{id}
+  controller: App\Controller\MessageController::deleteMessage
+  methods:    DELETE
+  defaults:
+    id: 1
+
+getConversationsById:
+  path:       /user-conversations/{userId}
+  controller: App\Controller\ConversationController::getUserConversations
+  methods:    GET
+  defaults:
+    userId: 1
+
+getConversation:
+  path:       /conversation/{id}
+  controller: App\Controller\ConversationController::getConversation
+  methods:    GET
+  defaults:
+    id: 1
+
+postConversation:
+  path:       /conversation
+  controller: App\Controller\ConversationController::createConversation
+  methods:    POST
+
+patchConversation:
+  path:       /conversation/{id}
+  controller: App\Controller\ConversationController::patchConversation
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteConversation:
+  path:       /conversation/{id}
+  controller: App\Controller\ConversationController::deleteConversation
+  methods:    DELETE
+  defaults:
+    id: 1
